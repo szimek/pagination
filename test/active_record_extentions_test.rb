@@ -1,23 +1,19 @@
 require File.dirname(__FILE__) + '/test_helper'
-require 'active_record/base_extensions'
-require 'active_record/scope_extensions'
-require 'mocha'
-
 
 class ActiveRecordExtentionsTest < Test::Unit::TestCase
   context "active record extentions" do
     setup do
       User.delete_all
       Article.delete_all
-      
+
       @user1 = User.create :first_name => 'Bob', :last_name => 'Builder'
       @user2 = User.create :first_name => 'Bob', :last_name => 'Builder2'
       @user3 = User.create :first_name => 'Tom', :last_name => 'Builder'
-      
+
       5.times do |i|
         Article.create(:title => "title_#{i}", :user => @user1)
       end
-      
+
       3.times do |i|
         Article.create!(:title => "2title_#{i}", :user => @user2)
       end

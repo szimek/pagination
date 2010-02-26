@@ -1,8 +1,7 @@
-gem 'actionpack', '2.3.5'
+require File.dirname(__FILE__) + '/../test_helper'
+
 require 'action_controller'
 require 'action_controller/test_process'
-
-require 'pagination'
 
 ActionController::Routing::Routes.draw do |map|
   map.connect 'dummy/page/:page', :controller => 'dummy'

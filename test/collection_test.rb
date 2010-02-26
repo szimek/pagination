@@ -1,6 +1,4 @@
 require File.dirname(__FILE__) + '/test_helper'
-require File.dirname(__FILE__) + '/../lib/pagination/collection'
-require File.dirname(__FILE__) + '/../lib/pagination/enumerable'
 
 class CollectionTest < Test::Unit::TestCase
   context "collection test" do
